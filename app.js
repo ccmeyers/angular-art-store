@@ -1,56 +1,124 @@
 (function(){
 
   var app = angular.module('store', []);
-          // AngularJS   (App Name,  Dependencies)
+
 
   app.controller('StoreController', function(){
     this.products = [
       {
-        name: 'Awesome Multi-touch Keyboard',
-        price: 250.00,
-        description: "...",
+        name: 'Wheat Field with Cypresses - Vincent van Gogh',
+        price: 5000000,
+        image: 'images/vangogh.jpg',
+        description: "Oil on canvas",
+        bids: [
+          {
+            bid: 5000000,
+            by: "notavi@iswear.com"
+          },
+          {
+            bid: 5000001,
+            by: "arel@heistenburg.com"
+          }
+        ],
         reviews: [
           {
             stars: 5,
-            body: "I love this product!",
-            author: "joe@thomas.com"
+            body: "What a visionary!",
+            author: "joe@joe.com"
           },
           {
             stars: 1,
-            body: "This product sucks",
+            body: "Ever heard of a straight line???",
+            author: "tim@hater.com"
+          }
+        ]
+      },      
+      {
+        name: 'Two Young Girls at the Piano - Auguste Renoir',
+        price: 3000000,
+        image: 'images/renoir.jpg',
+        description: "Oil on canvas",
+        bids: [
+          {
+            bid: 3000000,
+            by: "notavi@iswear.com"
+          },
+          {
+            bid: 3000001,
+            by: "arel@heistenburg.com"
+          }
+        ],
+        reviews: [
+          {
+            stars: 3,
+            body: "Beautiful!",
+            author: "joe@joe.com"
+          },
+          {
+            stars: 1,
+            body: "It's totally out of focus!",
+            author: "tim@hater.com"
+          }
+        ]
+      },      
+      {
+        name: 'George Washington - Gilbert Stuart',
+        price: 6000000,
+        image: 'images/washington.jpg',
+        description: "Oil on canvas",
+        bids: [
+          {
+            bid: 6000000,
+            by: "notavi@iswear.com"
+          },
+          {
+            bid: 6000001,
+            by: "arel@heistenburg.com"
+          }
+        ],
+        reviews: [
+          {
+            stars: 4,
+            body: "Do you know he had wooden teeth?",
+            author: "joe@joe.com"
+          },
+          {
+            stars: 1,
+            body: "Who cares about some old dude?",
+            author: "tim@hater.com"
+          }
+        ]
+      },      
+      {
+        name: 'At the Lapin Agile - Pablo Picasso',
+        price: 7000000,
+        image: 'images/picasso.jpg',
+        description: "Oil on canvas",
+        bids: [
+          {
+            bid: 7000000,
+            by: "notavi@iswear.com"
+          },
+          {
+            bid: 7000001,
+            by: "arel@heistenburg.com"
+          }
+        ],
+        reviews: [
+          {
+            stars: 5,
+            body: "Groundbreaking!",
+            author: "joe@joe.com"
+          },
+          {
+            stars: 1,
+            body: "That guy can't paint!",
             author: "tim@hater.com"
           }
         ]
       }
     ];
   });
-
-  // var gems = [
-  // {
-  //   name: 'Dodecahedron',
-  //   price: 2,
-  //   description: '...',
-  //   canPurchase: true,
-  //   soldOut: false
-  // },
-  // {
-  //   name: "Pentagonal Gem",
-  //   price: 5.95,
-  //   description: "...",
-  //   canPurchase: true,
-  //   soldOut: false,
-  //   // images: [
-  //   //   {
-  //   //     full: 'dodecahedron-01-full.jpg',
-  //   //     thumb: 'dodecahedron-01-thumb.jpg'
-  //   //   },
-  //   //   {
-  //   //     full: 'dodecahedron-02-full.jpg',
-  //   //     thumb: 'dodecahedron-02-thumb.jpg'
-  //   //   },
-  //   // ]
-  // }
-  // ];
 
   app.controller("PanelController", function(){
     this.tab = 1;
@@ -68,6 +136,15 @@
     this.addReview = function(product) {
       product.reviews.push(this.review); //pushes review into that product's reviews array
       this.review = {}; //clears form
+    };
+  });
+
+  app.controller("BidController", function(){
+    this.bid = {};
+
+    this.addBid = function(bid) {
+      product.bids.push(this.bid);
+      this.bid = {};
     };
   });
 
