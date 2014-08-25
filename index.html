@@ -2,14 +2,13 @@
 <html ng-app="store">
   <head>
     <link rel="stylesheet" type="text/css" href="bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="app.css"/>
   </head>
 
   <body ng-controller="StoreController as store">
     <li class="list-group-item" ng-repeat="product in store.products"> 
 
-        <h3> {{product.name}} 
-        <em class="pull-right">{{product.price | currency}}</em>
-        </h3>
+        <h3 ng-include src="'product-title.html'"></h3>
         <img ng-src="{{product.image}}"/>
 
         <section ng-controller="PanelController as panel">
@@ -36,15 +35,16 @@
               <b>Bid: {{bid.bid | currency}}</b>
               <cite>by: {{bid.by}}</cite>
             </blockquote>
-            <form name="reviewForm" ng-controller="BidController as bidCtrl" ng-submit="bidForm.$valid && bidCtrl.addBid(bid)" novalidate>
+            <form name="reviewForm" ng-controller="BidController as bidCtrl" ng-submit="bidForm.$valid && bidCtrl.addBid(product)" novalidate>
               <blockquote>
-                <b>Bid: {{bidCtrl.bid.bid}}</b>
-                <cite>by: {{bidCtrl.bid.by}}</cite>
+                <b>Your Bid: ${{bidCtrl.bid.bid}}</b>
+                <cite>Your Name: {{bidCtrl.bid.by}}</cite>
               </blockquote>
               <label>Bid: </label>
               <input ng-model="bidCtrl.bid.bid" type="string" required>
               <label>by: </label>
               <input ng-model="bidCtrl.bid.by" type="string" required>
+              <div>reviewForm is {{reviewForm.$valid}} </div>
               <input type="submit" value="Submit" />
             </form>
           </div>
@@ -76,7 +76,6 @@
               <input type="submit" value="Submit"/>
             </form>
           </div>
-          <button ng-show="product.canPurchase">Add to Cart</button>
         </section>
 
     </li>

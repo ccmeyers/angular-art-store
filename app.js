@@ -142,7 +142,7 @@
   app.controller("BidController", function(){
     this.bid = {};
 
-    this.addBid = function(bid) {
+    this.addBid = function(product) {
       product.bids.push(this.bid);
       this.bid = {};
     };
