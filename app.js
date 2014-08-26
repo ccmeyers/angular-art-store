@@ -9,7 +9,7 @@
         name: 'Wheat Field with Cypresses - Vincent van Gogh',
         price: 5000000,
         image: 'images/vangogh.jpg',
-        description: "Oil on canvas",
+        description: "Date: 1889, Medium: Oil on canvas",
         bids: [
           {
             bid: 5000000,
@@ -37,7 +37,7 @@
         name: 'Two Young Girls at the Piano - Auguste Renoir',
         price: 3000000,
         image: 'images/renoir.jpg',
-        description: "Oil on canvas",
+        description: "Date: 1892, Medium: Oil on canvas",
         bids: [
           {
             bid: 3000000,
@@ -65,7 +65,7 @@
         name: 'George Washington - Gilbert Stuart',
         price: 6000000,
         image: 'images/washington.jpg',
-        description: "Oil on canvas",
+        description: "Date: begun 1795, Medium: Oil on canvas",
         bids: [
           {
             bid: 6000000,
@@ -93,7 +93,7 @@
         name: 'At the Lapin Agile - Pablo Picasso',
         price: 7000000,
         image: 'images/picasso.jpg',
-        description: "Oil on canvas",
+        description: "Date: 1905, Medium: Oil on canvas",
         bids: [
           {
             bid: 7000000,
@@ -120,15 +120,15 @@
     ];
   });
 
-  app.controller("PanelController", function(){
-    this.tab = 1;
-    this.selectTab = function(setTab) {
-      this.tab = setTab;
-    };
-    this.isSelected = function(checkTab) {
-      return this.tab === checkTab;
-    };
-  });
+  // app.controller("PanelController", function(){
+  //   this.tab = 1;
+  //   this.selectTab = function(setTab) {
+  //     this.tab = setTab;
+  //   };
+  //   this.isSelected = function(checkTab) {
+  //     return this.tab === checkTab;
+  //   };
+  // });
 
   app.controller("ReviewController", function(){
     this.review = {};
@@ -146,6 +146,30 @@
       product.bids.push(this.bid);
       this.bid = {};
     };
+  });
+
+  app.directive('productTitle', function(){
+    return {
+      restrict: 'E',
+      templateUrl: 'product-title.html'
+    };
+  });
+
+  app.directive('productPanels', function(){
+    return {
+      restrict: 'E',
+      templateUrl: 'product-panels.html',
+      controller:function(){
+        this.tab = 1;
+        this.selectTab = function(setTab) {
+          this.tab = setTab;
+        };
+        this.isSelected = function(checkTab) {
+          return this.tab === checkTab;
+        };
+      },
+      controllerAs: 'panel'
+    }
   });
 
 })();
