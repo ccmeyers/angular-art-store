@@ -116,6 +116,62 @@
             author: "tim@hater.com"
           }
         ]
+      },
+      {
+        name: 'The Dance Class - Edgar Degas',
+        price: 10000000,
+        image: 'images/degas.jpg',
+        description: "Date: 1873-76, Medium: Oil on canvas",
+        bids: [
+          {
+            bid: 10000000,
+            by: "notavi@iswear.com"
+          },
+          {
+            bid: 10000001,
+            by: "arel@heistenburg.com"
+          }
+        ],
+        reviews: [
+          {
+            stars: 4,
+            body: "Impressionism at its best!",
+            author: "joe@joe.com"
+          },
+          {
+            stars: 1,
+            body: "They aren't even dancing.",
+            author: "tim@hater.com"
+          }
+        ]
+      },
+      {
+        name: 'The Piano Lesson - Henri Matisse',
+        price: 6500000,
+        image: 'images/matisse.jpg',
+        description: "Date: 1916, Medium: Oil on canvas",
+        bids: [
+          {
+            bid: 6500000,
+            by: "notavi@iswear.com"
+          },
+          {
+            bid: 6500001,
+            by: "arel@heistenburg.com"
+          }
+        ],
+        reviews: [
+          {
+            stars: 4,
+            body: "This speaks to my soul.",
+            author: "joe@joe.com"
+          },
+          {
+            stars: 1,
+            body: "My 8 year old could do this.",
+            author: "tim@hater.com"
+          }
+        ]
       }
     ];
   });
