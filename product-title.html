@@ -1,5 +1,7 @@
-<h3>{{product.name}} 
-<em class="pull-right dinero">{{product.price | currency}}</em></h3>
+<h3>{{product.name}} </h3>
 <div class="image-container">
+  <div class="cost-display">
+    <em class="text-shadow">{{product.price | currency}}</em>
+  </div>
   <img ng-src="{{product.image}}"/>
 </div>

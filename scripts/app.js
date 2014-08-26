@@ -6,10 +6,10 @@
   app.controller('StoreController', function(){
     this.products = [
       {
-        name: 'Wheat Field with Cypresses - Vincent van Gogh',
+        name: 'Wheat Field with Cypresses',
         price: 5000000,
         image: 'images/vangogh.jpg',
-        description: "Date: 1889, Medium: Oil on canvas",
+        description: "Artist: Vincent van Gogh, Date: 1889, Medium: Oil on canvas",
         bids: [
           {
             bid: 5000000,
@@ -34,10 +34,10 @@
         ]
       },      
       {
-        name: 'Two Young Girls at the Piano - Auguste Renoir',
+        name: 'Two Young Girls at the Piano',
         price: 3000000,
         image: 'images/renoir.jpg',
-        description: "Date: 1892, Medium: Oil on canvas",
+        description: "Artist: Auguste Renoir, Date: 1892, Medium: Oil on canvas",
         bids: [
           {
             bid: 3000000,
@@ -62,10 +62,10 @@
         ]
       },      
       {
-        name: 'George Washington - Gilbert Stuart',
+        name: 'George Washington',
         price: 6000000,
         image: 'images/washington.jpg',
-        description: "Date: begun 1795, Medium: Oil on canvas",
+        description: "Artist: Gilbert Stuart, Date: begun 1795, Medium: Oil on canvas",
         bids: [
           {
             bid: 6000000,
@@ -90,10 +90,10 @@
         ]
       },      
       {
-        name: 'At the Lapin Agile - Pablo Picasso',
+        name: 'At the Lapin Agile',
         price: 7000000,
         image: 'images/picasso.jpg',
-        description: "Date: 1905, Medium: Oil on canvas",
+        description: "Artist: Pablo Picasso, Date: 1905, Medium: Oil on canvas",
         bids: [
           {
             bid: 7000000,
@@ -118,10 +118,10 @@
         ]
       },
       {
-        name: 'The Dance Class - Edgar Degas',
+        name: 'The Dance Class',
         price: 10000000,
         image: 'images/degas.jpg',
-        description: "Date: 1873-76, Medium: Oil on canvas",
+        description: "Artist: Edgar Degas, Date: 1873-76, Medium: Oil on canvas",
         bids: [
           {
             bid: 10000000,
@@ -146,10 +146,10 @@
         ]
       },
       {
-        name: 'The Piano Lesson - Henri Matisse',
+        name: 'The Piano Lesson',
         price: 6500000,
         image: 'images/matisse.jpg',
-        description: "Date: 1916, Medium: Oil on canvas",
+        description: "Artist: Henri Matisse, Date: 1916, Medium: Oil on canvas",
         bids: [
           {
             bid: 6500000,
