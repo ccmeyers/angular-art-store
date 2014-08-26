@@ -12,56 +12,58 @@
   </ul>
 
   <div class="panel" ng-show="panel.isSelected(1)">
-    <h4>Description</h4>
     <p>{{product.description}}</p>
   </div>
 
   <div class="panel" ng-show="panel.isSelected(2)">
-    <h4>Bids</h4>
-    <blockquote ng-repeat="bid in product.bids">
-      <b>Bid: {{bid.bid | currency}}</b>
-      <cite>by: {{bid.by}}</cite>
-    </blockquote>
+    <div ng-repeat="bid in product.bids">
+      <div class="bid-block">
+        <span><b>Bid:</b> {{bid.bid | currency}}</span>
+        <p>by: {{bid.by}}</p>
+      </div>
+    </div>
     <form name="reviewForm" ng-controller="BidController as bidCtrl" 
     ng-submit="bidForm.$valid && bidCtrl.addBid(product)" novalidate>
-      <blockquote>
-        <b>Your Bid: {{bidCtrl.bid.bid}}</b>
-        <cite>Your Name: {{bidCtrl.bid.by}}</cite>
-      </blockquote>
-      <label>Bid: </label>
-      <input ng-model="bidCtrl.bid.bid" type="string" required>
-      <label>by: </label>
-      <input ng-model="bidCtrl.bid.by" type="string" required>
-      <div>reviewForm is {{reviewForm.$valid}} </div>
-      <input type="submit" value="Submit" />
+      <div class="bid-block user-bid">
+        <span><b>Your Bid:</b> {{bidCtrl.bid.bid}}</span>
+        <p>Your Name: {{bidCtrl.bid.by}}</p>
+      </div>
+      <div class="input-boxes">
+        <input ng-model="bidCtrl.bid.bid" type="string" placeholder="Bid amount" required>
+        <input ng-model="bidCtrl.bid.by" type="email" placeholder="Your email" required>
+      </div>
+      <!-- <div>reviewForm is {{reviewForm.$valid}} </div> -->
+      <input class="submit-btn" type="submit" value="Submit" />
     </form>
   </div>
 
   <div class="panel" ng-show="panel.isSelected(3)">
-    <h4>Reviews</h4>
-    <blockquote ng-repeat="review in product.reviews">
-      <b>Stars: {{review.stars}}</b>
-      {{review.body}}
-      <cite>by: {{review.author}}</cite>
-    </blockquote>
+    <div ng-repeat="review in product.reviews">
+      <div class="bid-block">
+        <span><b>{{review.body}}</b></span>
+        <p>Stars: {{review.stars}}<br>
+        by: {{review.author}}</p>
+      </div>
+    </div>
     <form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)" novalidate>
-      <blockquote>
-        <b>Stars: {{reviewCtrl.review.stars}}</b>
-        {{reviewCtrl.review.body}}
-        <cite>by: {{reviewCtrl.review.author}}</cite>
-      </blockquote>
-      <select ng-model="reviewCtrl.review.stars" required>
-        <option value="1">1 star</option>
-        <option value="2">2 stars</option>
-        <option value="3">3 stars</option>
-        <option value="4">4 stars</option>
-        <option value="5">5 stars</option>
-      </select>
-      <textarea ng-model="reviewCtrl.review.body" required></textarea>
-      <label>by:</label>
-      <input ng-model="reviewCtrl.review.author" type="email" required />
-      <div>reviewForm is {{reviewForm.$valid}} </div>
-      <input type="submit" value="Submit"/>
+      <div class="bid-block user-bid">
+        <span><b>{{reviewCtrl.review.body}}</b></span>
+        <p>Stars: {{reviewCtrl.review.stars}}<br>
+        by: {{reviewCtrl.review.author}}</p>
+      </div>
+      <div class="input-boxes">
+        <textarea ng-model="reviewCtrl.review.body" placeholder="Your review" required></textarea>
+        <select ng-model="reviewCtrl.review.stars" required>
+          <option value="1">1 star</option>
+          <option value="2">2 stars</option>
+          <option value="3">3 stars</option>
+          <option value="4">4 stars</option>
+          <option value="5">5 stars</option>
+        </select>
+        <input ng-model="reviewCtrl.review.author" type="email" placeholder="Your email" required />
+      </div>
+      <!-- <div>reviewForm is {{reviewForm.$valid}} </div> -->
+      <input class="submit-btn" type="submit" value="Submit"/>
     </form>
   </div>
 </section>

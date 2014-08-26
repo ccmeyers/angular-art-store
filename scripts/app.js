@@ -60,92 +60,8 @@
             author: "tim@hater.com"
           }
         ]
-      },      
-      {
-        name: 'George Washington',
-        price: 6000000,
-        image: 'images/washington.jpg',
-        description: "Artist: Gilbert Stuart, Date: begun 1795, Medium: Oil on canvas",
-        bids: [
-          {
-            bid: 6000000,
-            by: "notavi@iswear.com"
-          },
-          {
-            bid: 6000001,
-            by: "arel@heistenburg.com"
-          }
-        ],
-        reviews: [
-          {
-            stars: 4,
-            body: "Do you know he had wooden teeth?",
-            author: "joe@joe.com"
-          },
-          {
-            stars: 1,
-            body: "Who cares about some old dude?",
-            author: "tim@hater.com"
-          }
-        ]
-      },      
-      {
-        name: 'At the Lapin Agile',
-        price: 7000000,
-        image: 'images/picasso.jpg',
-        description: "Artist: Pablo Picasso, Date: 1905, Medium: Oil on canvas",
-        bids: [
-          {
-            bid: 7000000,
-            by: "notavi@iswear.com"
-          },
-          {
-            bid: 7000001,
-            by: "arel@heistenburg.com"
-          }
-        ],
-        reviews: [
-          {
-            stars: 5,
-            body: "Groundbreaking!",
-            author: "joe@joe.com"
-          },
-          {
-            stars: 1,
-            body: "That guy can't paint!",
-            author: "tim@hater.com"
-          }
-        ]
       },
-      {
-        name: 'The Dance Class',
-        price: 10000000,
-        image: 'images/degas.jpg',
-        description: "Artist: Edgar Degas, Date: 1873-76, Medium: Oil on canvas",
-        bids: [
-          {
-            bid: 10000000,
-            by: "notavi@iswear.com"
-          },
-          {
-            bid: 10000001,
-            by: "arel@heistenburg.com"
-          }
-        ],
-        reviews: [
-          {
-            stars: 4,
-            body: "Impressionism at its best!",
-            author: "joe@joe.com"
-          },
-          {
-            stars: 1,
-            body: "They aren't even dancing.",
-            author: "tim@hater.com"
-          }
-        ]
-      },
-      {
+            {
         name: 'The Piano Lesson',
         price: 6500000,
         image: 'images/matisse.jpg',
@@ -172,7 +88,91 @@
             author: "tim@hater.com"
           }
         ]
-      }
+      }      
+      // {
+      //   name: 'George Washington',
+      //   price: 6000000,
+      //   image: 'images/washington.jpg',
+      //   description: "Artist: Gilbert Stuart, Date: begun 1795, Medium: Oil on canvas",
+      //   bids: [
+      //     {
+      //       bid: 6000000,
+      //       by: "notavi@iswear.com"
+      //     },
+      //     {
+      //       bid: 6000001,
+      //       by: "arel@heistenburg.com"
+      //     }
+      //   ],
+      //   reviews: [
+      //     {
+      //       stars: 4,
+      //       body: "Do you know he had wooden teeth?",
+      //       author: "joe@joe.com"
+      //     },
+      //     {
+      //       stars: 1,
+      //       body: "Who cares about some old dude?",
+      //       author: "tim@hater.com"
+      //     }
+      //   ]
+      // },     
+      // {
+      //   name: 'At the Lapin Agile',
+      //   price: 7000000,
+      //   image: 'images/picasso.jpg',
+      //   description: "Artist: Pablo Picasso, Date: 1905, Medium: Oil on canvas",
+      //   bids: [
+      //     {
+      //       bid: 7000000,
+      //       by: "notavi@iswear.com"
+      //     },
+      //     {
+      //       bid: 7000001,
+      //       by: "arel@heistenburg.com"
+      //     }
+      //   ],
+      //   reviews: [
+      //     {
+      //       stars: 5,
+      //       body: "Groundbreaking!",
+      //       author: "joe@joe.com"
+      //     },
+      //     {
+      //       stars: 1,
+      //       body: "That guy can't paint!",
+      //       author: "tim@hater.com"
+      //     }
+      //   ]
+      // },
+      // {
+      //   name: 'The Dance Class',
+      //   price: 10000000,
+      //   image: 'images/degas.jpg',
+      //   description: "Artist: Edgar Degas, Date: 1873-76, Medium: Oil on canvas",
+      //   bids: [
+      //     {
+      //       bid: 10000000,
+      //       by: "notavi@iswear.com"
+      //     },
+      //     {
+      //       bid: 10000001,
+      //       by: "arel@heistenburg.com"
+      //     }
+      //   ],
+      //   reviews: [
+      //     {
+      //       stars: 4,
+      //       body: "Impressionism at its best!",
+      //       author: "joe@joe.com"
+      //     },
+      //     {
+      //       stars: 1,
+      //       body: "They aren't even dancing.",
+      //       author: "tim@hater.com"
+      //     }
+      //   ]
+      // },
     ];
   });
 
