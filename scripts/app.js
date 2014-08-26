@@ -2,6 +2,23 @@
 
   var app = angular.module('store', ['store-products']);
 
+  app.controller("ReviewController", function(){
+    this.review = {};
+
+    this.addReview = function(product) {
+      product.reviews.push(this.review); //pushes review into that product's reviews array
+      this.review = {}; //clears form
+    };
+  });
+
+  app.controller("BidController", function(){
+    this.bid = {};
+
+    this.addBid = function(product) {
+      product.bids.push(this.bid);
+      this.bid = {};
+    };
+  });
 
   app.controller('StoreController', function(){
     this.products = [
@@ -174,24 +191,6 @@
       //   ]
       // },
     ];
-  });
-
-  app.controller("ReviewController", function(){
-    this.review = {};
-
-    this.addReview = function(product) {
-      product.reviews.push(this.review); //pushes review into that product's reviews array
-      this.review = {}; //clears form
-    };
-  });
-
-  app.controller("BidController", function(){
-    this.bid = {};
-
-    this.addBid = function(product) {
-      product.bids.push(this.bid);
-      this.bid = {};
-    };
   });
 
   // app.controller("PanelController", function(){
