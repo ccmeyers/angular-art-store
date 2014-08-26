@@ -1,3 +1,43 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,900);
+
+html, body {
+  background: rgba(0,0,0,0.4);
+  font-family: font-family: 'Lato', sans-serif;
+}
+
+.navbar {
+  border-radius: 0;
+  border-width: 0;
+}
+
+.list-group-item {
+  position: relative;
+  border-radius: 0 !important;
+  border-width: 0 !important;
+  float: left;
+  background: rgba(0,0,0,0.5);
+}
+
+.list-group-item h3 {
+  color: rgba(255,255,255, 0.8);
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 100;
+}
+
+.list-group-item h3.dinero {
+  font-size: 12px;
+}
+
+.image-container {
+  position: relative;
+  top: 0;
+}
+
+.image-container img {
+  width: 100%;
+}
+
 .ng-invalid.ng-dirty {
   border-color: #FA787E;
 }

@@ -150,7 +150,7 @@
 
   app.directive('productTitle', function(){
     return {
-      restrict: 'E',
+      restrict: 'E', // E stands for element
       templateUrl: 'product-title.html'
     };
   });
