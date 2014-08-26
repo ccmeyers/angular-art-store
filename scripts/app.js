@@ -1,6 +1,6 @@
 (function(){
 
-  var app = angular.module('store', []);
+  var app = angular.module('store', ['store-products']);
 
 
   app.controller('StoreController', function(){
@@ -176,16 +176,6 @@
     ];
   });
 
-  // app.controller("PanelController", function(){
-  //   this.tab = 1;
-  //   this.selectTab = function(setTab) {
-  //     this.tab = setTab;
-  //   };
-  //   this.isSelected = function(checkTab) {
-  //     return this.tab === checkTab;
-  //   };
-  // });
-
   app.controller("ReviewController", function(){
     this.review = {};
 
@@ -204,35 +194,14 @@
     };
   });
 
-  app.directive('productTitle', function(){
-    return {
-      restrict: 'E', // E stands for element
-      templateUrl: 'product-title.html'
-    };
-  });
-
-  app.directive('productPanels', function(){
-    return {
-      restrict: 'E',
-      templateUrl: 'product-panels.html',
-      controller:function(){
-        this.tab = 1;
-        this.selectTab = function(setTab) {
-          this.tab = setTab;
-        };
-        this.isSelected = function(checkTab) {
-          return this.tab === checkTab;
-        };
-      },
-      controllerAs: 'panel'
-    }
-  });
-
-  app.directive('navBar', function(){
-    return {
-      restrict: 'E',
-      templateUrl: 'nav-bar.html'
-    };
-  });
+  // app.controller("PanelController", function(){
+  //   this.tab = 1;
+  //   this.selectTab = function(setTab) {
+  //     this.tab = setTab;
+  //   };
+  //   this.isSelected = function(checkTab) {
+  //     return this.tab === checkTab;
+  //   };
+  // });
 
 })();

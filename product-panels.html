@@ -26,7 +26,7 @@
     ng-submit="bidForm.$valid && bidCtrl.addBid(product)" novalidate>
       <div class="bid-block user-bid">
         <span><b>Your Bid:</b> {{bidCtrl.bid.bid}}</span>
-        <p>Your Name: {{bidCtrl.bid.by}}</p>
+        <p>Your Email: {{bidCtrl.bid.by}}</p>
       </div>
       <div class="input-boxes">
         <input ng-model="bidCtrl.bid.bid" type="string" placeholder="Bid amount" required>
