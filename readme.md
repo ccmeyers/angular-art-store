@@ -1,8 +1,3 @@
-[ ] frontend | styling 1 - 2 hours
-[ ] slides | 30 - 45 mins
+#Angular Art Store
 
-[ ] write speeches | 30 - 45 mins
-[ ] prune the presentation/practice 30 - 45 mins
-
-max = 3.5
-min = 2
+The beginnings of a fake, black-market art store to learn AngularJS
